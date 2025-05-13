@@ -1,6 +1,6 @@
 # Fortigate_Firewall_Adminstration_Course
 
-## Initial Setup.
+## 1.Initial Setup.
  ### **Fortigate Access**
 - We have 3 options to connect to our fortigate unite:
      1) Via Web
@@ -35,4 +35,16 @@
 ---
 ---
 
+## 2. How to Enable Intenet Access in Foritgate.
+
+## 3.Fotigate Menu [ Kind of Inbuilt Monitor tools for Fortigate]
+
+## 4.Feature Visibilty [ Some features are not enabled by default , we need to explictily enable it]
+ - System > Feature Visibility.
+
+## 5.How to Create Admin Users?
+
+## 6.Secure Access
+
+## Password Recovery.
 
