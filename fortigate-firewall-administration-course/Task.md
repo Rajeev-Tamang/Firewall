@@ -12,3 +12,20 @@
   2) Check the internet connetion from fortigate.
   3) Check the internet from lan network.
   4) Configure the Fortigate to allow lan network to access internet.
+     
+## 3.Check the differnt tab of Foritview menu.
+
+## 4. Enable the feature which are disable by default.
+
+## 5.Create Admin Users?  
+  1) Create user with full access.
+  2) Create user with limited access.
+  3) Create new user via CLI.
+
+## 6. Secure Access
+  1) Change the user password.
+  2) only valid ip address  user can access the device.
+  3) When user sets password , it should meet the certain requirement. Cretae the requirement of it. (Like uppercase, lowercase , symbols, numbers,etc).
+
+## 7. You forgot your admin password, Now recover it.
+
