@@ -7,3 +7,8 @@
   5) Set the name/description of port 1 .
   6) Access of http.ping & ssh.
 
+## 2. Internet Access.
+  1) Configure the Wan-Static Interface.
+  2) Check the internet connetion from fortigate.
+  3) Check the internet from lan network.
+  4) Configure the Fortigate to allow lan network to access internet.
