@@ -3,9 +3,9 @@
 ## Initial Setup.
  ### **Fortigate Access**
 - We have 3 options to connect to our fortigate unite:
-    - 1) Via Web
-    - 2) Via Cli (Ssh)
-    - 3) Via console
+     1) Via Web
+     2) Via Cli (Ssh)
+     3) Via console
 
 - The appliance come from the factory with the port1 already configured with the IP@ "192.168.1.99"
 
