@@ -137,6 +137,19 @@ vpcs: Save
 - ***Now i can't acccess the device with user rajeev as only 172.16.210.233 is allowed to access***
 
 ## 7.Password Recovery.
-
+- **Requirement**
+  1) Physical Access
+  2) Access via Console
+  3) Serial number of Fortigate (***Back of Fortigate or will display when logging via console).
+  4) Power off/on the device and access via Console.
+-  LOGIN to the fortigate with username: **maintainer**
+-  password will be : bcpb"serial number" i.e "bcpbFGVMEV5LDLXJ9907" 
+####
+- Fortigate-firewall # config system admin
+- Fortigate-firewall (admin) # edit admin
+- Fortigate-firewall (admin) # set password newpassword@123
+- Fortigate-firewall (admin) # end
+       
+     
 ## 8. Address Objects.
 
