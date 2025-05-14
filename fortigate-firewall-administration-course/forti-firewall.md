@@ -152,4 +152,18 @@ vpcs: Save
        
      
 ## 8. Address Objects.
+ - **192.168.10.0/24** is my DMZ network alllow it to be access via internet.
+ - We can Create the address object and use that in firewall policy.
+#### 
+- Config PORT-4 as DMZ 
+![image](https://github.com/user-attachments/assets/588941ed-d55e-46f8-a46f-34923ca63f65)
+####
+- Config Address [ **POLICY&OBJECTS > ADDRESS > CREATE NEW** ]
+  ![image](https://github.com/user-attachments/assets/e0eda05a-25ef-46e2-b07e-a19cc8cbc0b7)
+####
+- Config firewall policy [ **POLICY & OBJECTS > FIREWALL POLICY > CREATE NEW** ]
+![image](https://github.com/user-attachments/assets/c416f591-ef05-430b-a7b5-14a0104f299a)
 
+
+
+   
