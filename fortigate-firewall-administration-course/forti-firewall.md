@@ -69,9 +69,21 @@ vpcs: Save
 
 
 ## 3.Fotigate Menu [ Kind of Inbuilt Monitor tools for Fortigate]
+- Dashborad > FortiView Source.
+  
+![image](https://github.com/user-attachments/assets/69c5a893-9bfa-44ce-9d55-e536652656af)
 
 ## 4.Feature Visibilty [ Some features are not enabled by default , we need to explictily enable it]
- - System > Feature Visibility.
+- System > Feature Visibility.
+###
+![image](https://github.com/user-attachments/assets/80cfc94f-8748-46f4-bb76-6bdced2b7e09) 
+- You can see that Email filter is disable by default, if we need it we need to enable it.
+####
+![image](https://github.com/user-attachments/assets/ebdfb33d-9d2c-4ffe-81ee-d6de8031667c)
+- After enableing it we can see it in , **Security Profile** ( ***By Clicking in **+** icon we can have more clear details.
+####
+![image](https://github.com/user-attachments/assets/7cd5a5d2-0f99-45cc-b1e0-7b45976c4c1b)
+
 
 ## 5.How to Create Admin Users?
 
