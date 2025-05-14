@@ -178,8 +178,8 @@ vpcs: Save
    - tftp server needs to be enabled , for exampla : tftp64.
    - **Fortigate-firewall # execute backup config tftp filename 192.168.1.1**
      **192.168.1.1 = ip address of tftp server**
- 
 
+## 10.Automation Stitches
 
 
    
