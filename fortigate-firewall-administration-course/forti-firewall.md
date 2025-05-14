@@ -118,6 +118,23 @@ vpcs: Save
 
 
 ## 6.Secure Access
+ ### 1) Change the User Password.
+   ![image](https://github.com/user-attachments/assets/5c80efa3-a755-4980-95d9-e67be1312b78)
+####
+![image](https://github.com/user-attachments/assets/f1e1caab-642f-43f8-aa04-33fcc5b7049f)
+### 2) Allow only specific IP to access the device.
+ - **SYSTEM > Administrator > EDIT > Restrict login to trusted hosts**
+![image](https://github.com/user-attachments/assets/e2b2ccf2-3daf-4b12-99a1-c66f2c97577e)
+####
+![image](https://github.com/user-attachments/assets/458f123e-876b-44fe-88b1-5535b6700397)
+####
+![image](https://github.com/user-attachments/assets/16c73665-1416-4a45-b5a3-a77da0e3d543)
+####
+ - **Lets Change the IP address and try again to login***
+####
+![image](https://github.com/user-attachments/assets/5900f0eb-8a2b-4f91-bc92-e0a0ebe8c633)
+
+- ***Now i can't acccess the device with user rajeev as only 172.16.210.233 is allowed to access***
 
 ## 7.Password Recovery.
 
