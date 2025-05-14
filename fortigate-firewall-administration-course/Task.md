@@ -33,4 +33,8 @@
 
 ## 9.Config Backup & Restore Using WebInterface & CLI.
 
+## 10.Automate Stitches.
+- Config Auto backup to tftp server , when even there is change in config.with timestamps.
+- 
+
 
