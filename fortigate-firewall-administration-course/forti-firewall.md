@@ -46,5 +46,7 @@
 
 ## 6.Secure Access
 
-## Password Recovery.
+## 7.Password Recovery.
+
+## 8. Address Objects.
 
