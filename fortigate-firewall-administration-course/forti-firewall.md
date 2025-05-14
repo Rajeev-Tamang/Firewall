@@ -11,12 +11,14 @@
 
 ### LOGIN
 - the login is "admin" for user and the password is empty  
+![image](https://github.com/user-attachments/assets/c2744b5c-aa88-4069-957e-17279159129d)
 
 ### Change Hostname 
 
 - FortiGate-VM64-KVM # config system global
 - FortiGate-VM64-KVM (global) # set hostname FGT1
 - FortiGate-VM64-KVM (global) # end
+![image](https://github.com/user-attachments/assets/cd7951a4-cbb5-4427-bb30-8aa6713158e3)
 
 ### Interfaces Configuration
 
@@ -28,14 +30,40 @@
 - FGT1 (port1) # set alias LAN1
 - FGT1 (port1) # set role lan
 - FGT1 (port1) # end
+![image](https://github.com/user-attachments/assets/ff642601-e8e6-4d1c-a555-d58daabc3b86)
 
 ### Ping From Cli ###
 - Execute Ping
+
+![image](https://github.com/user-attachments/assets/467fc169-4f60-431d-bcd8-39af51552eed)
+
 ---
 ---
 ---
 
 ## 2. How to Enable Intenet Access in Foritgate.
+![image](https://github.com/user-attachments/assets/b7b4c83e-8609-4c34-9738-05bd82bfd898)
+- Configure the dhcp mode and set role wan for port2 , allowacess for http,https,ssh,telnet
+  ![image](https://github.com/user-attachments/assets/54c85a1c-6d71-4c23-8de1-45953218b717)
+- Fortigate-firewall # config system interface
+- Fortigate-firewall (port2) # set alias WAN-port2
+- Fortigate-firewall (port2) # set allowaccess ping ssh telnet https 
+- Fortigate-firewall (port2) # set role wan
+- Fortigate-firewall (port2) # end
+### Aceess via web now.
+![image](https://github.com/user-attachments/assets/a4a9b635-daa6-4872-99cf-1b88d101fd9d)
+![image](https://github.com/user-attachments/assets/b9351e90-1ef6-4a0e-9276-471e37f3fc4d)
+ #### Configure such that the lan network can access the internet.
+  - Cretaing Firewall Policy for Lan network to Access internet.
+  - Policy & Objects >> Firewall Policy >>  
+![image](https://github.com/user-attachments/assets/2a11697b-f7fb-4861-8b68-121c45187169)
+
+![image](https://github.com/user-attachments/assets/e7da11da-73fb-48c4-a108-5287121c2045)
+vpcs:ip 192.168.1.100/24 192.168.1.99 
+vpcs: ip dns 8.8.8.8
+vpcs: Save
+![image](https://github.com/user-attachments/assets/ee7b6353-cf34-438b-9b41-ea74072725f1)
+
 
 ## 3.Fotigate Menu [ Kind of Inbuilt Monitor tools for Fortigate]
 
