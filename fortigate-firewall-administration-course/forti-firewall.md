@@ -11,6 +11,7 @@
 
 ### LOGIN
 - the login is "admin" for user and the password is empty  
+ ####
 ![image](https://github.com/user-attachments/assets/c2744b5c-aa88-4069-957e-17279159129d)
 
 ### Change Hostname 
@@ -18,6 +19,7 @@
 - FortiGate-VM64-KVM # config system global
 - FortiGate-VM64-KVM (global) # set hostname FGT1
 - FortiGate-VM64-KVM (global) # end
+####
 ![image](https://github.com/user-attachments/assets/cd7951a4-cbb5-4427-bb30-8aa6713158e3)
 
 ### Interfaces Configuration
@@ -30,6 +32,7 @@
 - FGT1 (port1) # set alias LAN1
 - FGT1 (port1) # set role lan
 - FGT1 (port1) # end
+#### 
 ![image](https://github.com/user-attachments/assets/ff642601-e8e6-4d1c-a555-d58daabc3b86)
 
 ### Ping From Cli ###
