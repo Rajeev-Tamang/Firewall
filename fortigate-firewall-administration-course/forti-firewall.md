@@ -165,5 +165,21 @@ vpcs: Save
 ![image](https://github.com/user-attachments/assets/c416f591-ef05-430b-a7b5-14a0104f299a)
 
 
+## 9.Config Backup & Restore.
+ ### BACKUP
+ - **Click the admin Icon > Configure > Backup**
+   ![image](https://github.com/user-attachments/assets/47050dac-9ae5-4cef-b2a3-13cc731c6252)
+####
+ ### Restore
+ - **Click the admin Icon > Configure > Restore**
+  ![image](https://github.com/user-attachments/assets/488e24c5-80b2-4a4c-9eda-581e492c3c5d)
+####
+- **NOW LETS TRY IT WITH CLI**
+   - tftp server needs to be enabled , for exampla : tftp64.
+   - **Fortigate-firewall # execute backup config tftp filename 192.168.1.1**
+     **192.168.1.1 = ip address of tftp server**
+ 
+
+
 
    
