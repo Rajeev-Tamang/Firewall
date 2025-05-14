@@ -86,6 +86,36 @@ vpcs: Save
 
 
 ## 5.How to Create Admin Users?
+ - By default we have two admin Profiles.
+   ####
+   ![image](https://github.com/user-attachments/assets/d5ec2b0b-6ed9-46c2-a787-73a607eea02b)
+- We can Create New Profile , where we can limit what shall be given with read access only, what with read/write and what should not be given
+- **SYSTEM > ADMIN PROFILES > CREATE NEW >....**
+####
+![image](https://github.com/user-attachments/assets/dafcef0b-0287-482d-a39c-b6ff2e70fc72)
+
+### Create user with full access.
+- **SYSTEM > ADMINISTRATION > CREATE NEW >** ***HERE WE CAN BIND THE ADMIN PROFILE WE CREATED OR USE THE DEFAULT ONES***
+####
+![image](https://github.com/user-attachments/assets/d80b21ed-1914-48ed-bcc3-2dc2a6cb8e91)
+
+
+### Create user with limited access.
+ - **WE CAN CREATE USER WITH LIMITED ACCESS BY EDITING THE PROFILES**
+
+### Create Admin Users From CLI ##
+
+- FGT # config system admin
+- FGT (admin) # edit user
+  - new entry 'user' added
+- FGT (user) # set vdom root
+- FGT (user) # set password superpassword
+- FGT (user) # set accprofile super_admin
+- FGT (user) # end
+- FGT #
+
+![image](https://github.com/user-attachments/assets/97c71073-995c-453d-b9b8-290b5313d075)
+
 
 ## 6.Secure Access
 
