@@ -30,3 +30,7 @@
 ## 7. You forgot your admin password, Now recover it.
 
 ## 8. Allow only certain subnet of DMZ to be accesss, Allow only web server IP to be access of DMZ. Config address group accoding to GroGraphy.
+
+## 9.Config Backup & Restore Using WebInterface & CLI.
+
+
