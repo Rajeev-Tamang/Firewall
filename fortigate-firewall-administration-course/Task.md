@@ -35,6 +35,15 @@
 
 ## 10.Automate Stitches.
 - Config Auto backup to tftp server , when even there is change in config.with timestamps.
-- 
+
+
+## 11.Firmware Upgrade.
+
+## 12.DHCP server Setup.
+  - Via CLI
+  - Via WebInterface
+## DHCP RELAY.
+  - Via CLI
+  - Via WebInterface
 
 
