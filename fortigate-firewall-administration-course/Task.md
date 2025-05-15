@@ -42,8 +42,9 @@
 ## 12.DHCP server Setup.
   - Via CLI
   - Via WebInterface
-## DHCP RELAY.
+## 13.DHCP RELAY.
   - Via CLI
   - Via WebInterface
-
+    
+## 14.Email Alerts.
 
