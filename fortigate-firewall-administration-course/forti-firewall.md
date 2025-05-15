@@ -180,11 +180,46 @@ vpcs: Save
      **192.168.1.1 = ip address of tftp server**
 
 ## 10.Automation Stitches
+- **Configure Such that when ever there is Change in config file backup shall be pused in tftp server**
+-  SECURITY FABRIC > AUTOMATION > CREATE NEW 
+  ####
+![image](https://github.com/user-attachments/assets/2a499752-3df3-4fa3-8d4c-7de22353a482)
+
+ - ***WhenEver the ConfigChange is Trigger, then ""execute backup config tftp backup 172.16.210.206"" Action shall be taken.***
+
 
 
 ## 11.Firmware Upgrade.
 
+- **If We have the valid phyical device & licences , we can find it in ***System > Firmware*** but we are using the VM ones so it will not be displayed, so we will directly download it from support website.**
+  ####
+  ![image](https://github.com/user-attachments/assets/0bc4f272-f93e-4288-ae49-4a08d92e6877) 
+####
+![image](https://github.com/user-attachments/assets/4f2788bc-8c27-4c79-b21f-9c2de3367d39)
+####
+- Selcet Upgrade from pervious Version and Download.
+####
+![image](https://github.com/user-attachments/assets/55ac5236-7d57-4752-a35e-9f4a183286b4)
+
 ## 12.DHCP server Setup.
+- Lets Setup DHCP server in port 1. And make VPC as DHCP Client.
+####
+![image](https://github.com/user-attachments/assets/82b086fe-c312-44d5-b2de-ee643267267a)
+####
+-- Via GUI, Enable the DHCP server in port.
+####
+![image](https://github.com/user-attachments/assets/24aa9d01-7627-473c-804d-ac6890012b5a)
+####
+- VPC
+####
+![image](https://github.com/user-attachments/assets/2535542e-6673-4272-b3f4-27c8aed89355)
+####
+![image](https://github.com/user-attachments/assets/01f45776-f87d-4fd5-a24e-a5412d988f77)
+
+### CLI DHCP Server Setup
+####
+![image](https://github.com/user-attachments/assets/d68492df-bb8c-4781-94aa-8759a38f5f90)
+####
 
 ## 13.DHCP RELAY.
 - 
