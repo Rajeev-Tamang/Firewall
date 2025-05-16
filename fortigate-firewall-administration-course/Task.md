@@ -55,3 +55,8 @@
 ## 16.DDNS
 - VM does not support the DDNS setup from GUI and i will not work, but just config the setup from CLI.
 
+## 17. Inter VLAN Routing.
+
+## 18.Redundant Link.
+
+## 20. Link Aggrigation(LACP).
