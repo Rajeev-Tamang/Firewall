@@ -261,6 +261,31 @@ vpcs: Save
 ![image](https://github.com/user-attachments/assets/4471fb16-2a15-4b4f-a56d-3ddf1cdde06c)
 ####
 
-
-
 ## 16.DDNS
+- We are using the Fortigate in VM so it will not be display in GUI , INTERFACE > DNS.
+- If we had Physical interface, it will be soon as .
+####
+![image](https://github.com/user-attachments/assets/973a2b42-b779-4dbb-9e3f-3476d6bfa306)
+####
+
+- **SO WE WILL CONFIG VIA CLI , IT WILL NOT BE WORKING AS WE ARE USING VM**
+  ####
+![image](https://github.com/user-attachments/assets/19eb7417-95d4-4d71-b8ba-9b597559b2cb)
+####
+- FortiGate-VM64-KVM (1) # show 
+- config system ddns
+    - edit 1
+        - set ddns-server FortiGuardDDNS
+        - set ddns-domain "tmg.fortiddns.com"
+        - set use-public-ip enable
+        - set monitor-interface "port3"
+    - next
+- end
+####
+![image](https://github.com/user-attachments/assets/90e672d3-0d7f-4b5d-a0ff-ab6fae439d60)
+####
+- FortiGate-VM64-KVM # diagnose debug enable 
+####
+![image](https://github.com/user-attachments/assets/616ef116-3093-4709-8f12-4eecbe73580f)
+####
+
