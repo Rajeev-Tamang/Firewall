@@ -222,10 +222,45 @@ vpcs: Save
 ####
 
 ## 13.DHCP RELAY.
-- 
+####
+![image](https://github.com/user-attachments/assets/5694ce0b-0dd8-4234-b154-7a8aff0188cf)
+####
+- VPC shall get ip form dhcp server 20.20.20.2 , which is in differnt network.Inorder to achive it we need dhcp relay, enable in port 1 of firewall.
+
+### Config of Cisco rtr.
+- IP ADDRESS
+- DHCP POOL
+  
+ ![image](https://github.com/user-attachments/assets/f25eb400-0059-48c4-9a8a-8888bdaeb700)
+
+### Config of Fortigate firewall.
+- Assign IP address on port 1 and enable dhcp server > Advance > Dhcp relay and Assign DHCP server ip.
+####
+![image](https://github.com/user-attachments/assets/ccbf391d-f225-4dd7-92b9-61b37fae1280)
+####
 
 ## 14.Email Alerts.
+- Config Such that When ever the admin login failed , the log/mail should be send to the gmail accout.
+- Enable the email/smtp server in **SYSTEM > SETTING > EMAIL SERVICE**
+####
+![image](https://github.com/user-attachments/assets/42a5bb95-d72f-424f-90e1-10f4b787a36d)
+####
+- Now, Create the Automation Stitches , when the admin login fail the log shall be send to specify email receipent.
+- **Security Fabric > Automation > Add**
+####
+![image](https://github.com/user-attachments/assets/3dc312ab-7e06-4b07-8c71-75854a81b32d)
+####
 
 ## 15. Traffic Shapping
+- Create Traffic shaper, with 10mpbs and gaurantted 1 mpbs, suppose we have 10 user than each shall atleast have 1 mbps. [shared]
+####
+![image](https://github.com/user-attachments/assets/f6719ff1-a633-4152-8740-6f9a47e411c0)
+####
+- Create Traffic Policy > and bind the traffic shaper profile , created earlier.
+####
+![image](https://github.com/user-attachments/assets/4471fb16-2a15-4b4f-a56d-3ddf1cdde06c)
+####
+
+
 
 ## 16.DDNS
