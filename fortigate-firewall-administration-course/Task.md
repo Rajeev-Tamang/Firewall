@@ -47,7 +47,11 @@
   - Via WebInterface
     
 ## 14.Email Alerts.
+- Config such that when there is login failed the mail should be generated and send to mail address the admin define.
 
 ## 15. Traffic Shapping
+- Config such that the  max bandwith 10mpbs shall be shared with all user  and gauranted of 1 mpbs.
 
 ## 16.DDNS
+- VM does not support the DDNS setup from GUI and i will not work, but just config the setup from CLI.
+
