@@ -289,3 +289,26 @@ vpcs: Save
 ![image](https://github.com/user-attachments/assets/616ef116-3093-4709-8f12-4eecbe73580f)
 ####
 
+## 17. Inter Vlan Routing.( Router on a Stick)
+
+![image](https://github.com/user-attachments/assets/81b58fae-faa1-4840-b8b1-930e152c3a02)
+####
+- Configure such that PC on diffrent subnet can ping with each Others.
+####
+- STEPS :
+   - Configure the Ip to PC.
+   - Config acess port and trunk port in Switch.
+   - Config IP rotuing in Switch.
+   - In Fortigate Create the Virtual Interface 10,20 & 30 and Bind it to port 2.
+     ####
+     ![image](https://github.com/user-attachments/assets/cbedb259-a1b2-4596-8d2b-9f449c2e22ad)
+####
+   - Similarly Create vlan 20 & 30 in Port 2.
+   - ***NOW IN ORDER TO MAKE THE COMMUINCATION BETWEEN DIFF VLAN, WE NEED TO MAKE THE FIREWALL POLICY FROM CLI.***
+     ####
+     ![image](https://github.com/user-attachments/assets/76c65261-c16a-473e-8ecd-7382daff8ee4)
+####
+- Now try the reachablilty .
+####
+![image](https://github.com/user-attachments/assets/d8356510-a58c-4fef-8126-e9b44525cf54)
+
