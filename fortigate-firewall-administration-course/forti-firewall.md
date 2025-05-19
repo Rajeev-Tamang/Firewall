@@ -321,7 +321,7 @@ vpcs: Save
 ####
 - Configure lACP in Switch.
 ####
-![image](https://github.com/user-attachments/assets/c4833080-aa79-47ff-b7ec-11864be16bb7)
+![image](https://github.com/user-attachments/assets/40acdb04-984b-494e-88d8-715f453e4391)
 ####
 - NOW try continue ping from PC to Firewall .
 - Shut one of the interface and see if failover happens or not
