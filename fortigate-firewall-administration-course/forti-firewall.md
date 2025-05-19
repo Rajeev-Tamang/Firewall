@@ -312,3 +312,20 @@ vpcs: Save
 ####
 ![image](https://github.com/user-attachments/assets/d8356510-a58c-4fef-8126-e9b44525cf54)
 
+## 18. LACP Configuration.
+![image](https://github.com/user-attachments/assets/43b10dae-19f4-41f0-a501-bd7b02d67724)
+
+#### 
+- Configure the LACP interface in Firewall and assign ip 192.168.10.1/24 and 192.168.10.10/24 in PC.
+![image](https://github.com/user-attachments/assets/26f952f1-9a6c-4bb2-8694-866090350270)
+####
+- Configure lACP in Switch.
+####
+![image](https://github.com/user-attachments/assets/c4833080-aa79-47ff-b7ec-11864be16bb7)
+####
+- NOW try continue ping from PC to Firewall .
+- Shut one of the interface and see if failover happens or not
+  ####
+  ![image](https://github.com/user-attachments/assets/359b2d2a-e0e9-44f5-b92e-15b393a54354)
+####
+
