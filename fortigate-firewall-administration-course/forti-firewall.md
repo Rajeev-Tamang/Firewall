@@ -390,7 +390,7 @@ vpcs: Save
 
 - Create a default static route
 
-* MGMT IP@
+### MGMT IP@
 
 - FGT-TP # config system settings 
 
@@ -400,7 +400,7 @@ vpcs: Save
 
 - FGT-TP # 
 
-* IPPOLL Creation
+### IPPOLL Creation
 
 - FGT-TP # config firewall ippool 
 
@@ -415,7 +415,7 @@ vpcs: Save
 
 - FGT-TP (1) # end
 
-* Nat Policy Creation
+### Nat Policy Creation
 
 - config firewall policy
     - edit 1
@@ -434,7 +434,7 @@ vpcs: Save
     - next
 - end
 
-* Default Static route
+ ### Default Static route
 
 - config router static
     - edit 1
