@@ -392,53 +392,53 @@ vpcs: Save
 
 * MGMT IP@
 
-FGT-TP # config system settings 
+- FGT-TP # config system settings 
 
-FGT-TP (settings) # set manageip 192.168.1.99/24 192.168.122.240/24
+- FGT-TP (settings) # set manageip 192.168.1.99/24 192.168.122.240/24
 
-FGT-TP (settings) # end
+- FGT-TP (settings) # end
 
-FGT-TP # 
+- FGT-TP # 
 
 * IPPOLL Creation
 
-FGT-TP # config firewall ippool 
+- FGT-TP # config firewall ippool 
 
-FGT-TP (ippool) # edit 1
-new entry '1' added
+- FGT-TP (ippool) # edit 1
+- new entry '1' added
 
-FGT-TP (1) # set type overload 
+- FGT-TP (1) # set type overload 
 
-FGT-TP (1) # set startip 192.168.122.240
+- FGT-TP (1) # set startip 192.168.122.240
 
-FGT-TP (1) # set endip 192.168.122.240
+- FGT-TP (1) # set endip 192.168.122.240
 
-FGT-TP (1) # end
+- FGT-TP (1) # end
 
 * Nat Policy Creation
 
-config firewall policy
-    edit 1
-        set name "INTERNET POLICY"
-        set srcintf "port1"
-        set dstintf "port3"
-        set srcaddr "all"
-        set dstaddr "all"
-        set action accept
-        set schedule "always"
-        set service "ALL"
-        set logtraffic all
-        set ippool enable
-        set poolname "1"
-        set nat enable
-    next
-end
+- config firewall policy
+    - edit 1
+        - set name "INTERNET POLICY"
+        - set srcintf "port1"
+        - set dstintf "port3"
+        - set srcaddr "all"
+        - set dstaddr "all"
+        - set action accept
+        - set schedule "always"
+        - set service "ALL"
+        - set logtraffic all
+        - set ippool enable
+        - set poolname "1"
+        - set nat enable
+    - next
+- end
 
 * Default Static route
 
-config router static
-    edit 1
-        set gateway 192.168.122.1
-    next
-end
+- config router static
+    - edit 1
+        - set gateway 192.168.122.1
+    - next
+- end
 
