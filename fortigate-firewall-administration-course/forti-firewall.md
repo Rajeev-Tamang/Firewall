@@ -329,3 +329,116 @@ vpcs: Save
   ![image](https://github.com/user-attachments/assets/359b2d2a-e0e9-44f5-b92e-15b393a54354)
 ####
 
+## 19. Transparent mode ( Making Our Firewall act as Switch , and we can not assign IP on port as regular)
+![image](https://github.com/user-attachments/assets/4b00f341-6ecd-4889-9c12-ba3160c2d672)
+####
+- ***Config of Fortigate***
+- FortiGate-VM64-KVM # show  system interface 
+- config system interface
+   - edit "fortilink"
+     - Set fortilink disable
+- end
+
+- FortiGate-VM64-KVM # show system settings 
+- config system settings
+    - set opmode transparent
+    - set manageip 192.168.10.99/255.255.255.0
+    - set gateway 192.168.10.1
+- end
+
+- ***Config of RTR***
+- !
+- interface Ethernet0/0
+  - ip address 192.168.10.1 255.255.255.0
+  - ip nat inside
+  - ip virtual-reassembly in
+  - duplex auto
+- !
+- interface Ethernet0/1
+  - ip address dhcp
+  - ip nat outside
+  - ip virtual-reassembly in
+  - duplex auto
+- !
+- interface Ethernet0/2
+ - ip address 192.168.20.1 255.255.255.0
+ - ip nat inside
+ - ip virtual-reassembly in
+ - duplex auto
+- !
+
+- ip nat source list 10 interface Ethernet0/1 overload
+- ip nat source list 11 interface Ethernet0/1 overload
+- ip route 0.0.0.0 0.0.0.0 172.16.210.1
+- !
+- access-list 10 permit 192.168.10.0 0.0.0.255
+- access-list 11 permit 192.168.20.0 0.0.0.255
+- !
+
+
+## 20.Enabling the NAT on Transparetn mode [ We can cannot assign the ip in port when using Transparent mode , but there a way 
+
+![image](https://github.com/user-attachments/assets/6260ab49-15a2-48c9-94b4-37a0758c7adb)
+
+### Enabling Nat On TP ###
+
+- Type two IP@ on the MGMT IP one for Administrative Access (LAN) and the second for gateway (WAN).
+
+- Configure IPPOOL With the WAN IP@
+
+- Create a policy and enable nat on it.
+
+- Create a default static route
+
+* MGMT IP@
+
+FGT-TP # config system settings 
+
+FGT-TP (settings) # set manageip 192.168.1.99/24 192.168.122.240/24
+
+FGT-TP (settings) # end
+
+FGT-TP # 
+
+* IPPOLL Creation
+
+FGT-TP # config firewall ippool 
+
+FGT-TP (ippool) # edit 1
+new entry '1' added
+
+FGT-TP (1) # set type overload 
+
+FGT-TP (1) # set startip 192.168.122.240
+
+FGT-TP (1) # set endip 192.168.122.240
+
+FGT-TP (1) # end
+
+* Nat Policy Creation
+
+config firewall policy
+    edit 1
+        set name "INTERNET POLICY"
+        set srcintf "port1"
+        set dstintf "port3"
+        set srcaddr "all"
+        set dstaddr "all"
+        set action accept
+        set schedule "always"
+        set service "ALL"
+        set logtraffic all
+        set ippool enable
+        set poolname "1"
+        set nat enable
+    next
+end
+
+* Default Static route
+
+config router static
+    edit 1
+        set gateway 192.168.122.1
+    next
+end
+
