@@ -461,13 +461,18 @@ vpcs: Save
 ### Overload Configuration
 
 - FGT-TP # show firewall ippool 
+####
+![image](https://github.com/user-attachments/assets/fd35c147-c904-4c82-806c-26a0764fb9ee)
+####
 - config firewall ippool
     - edit "Overload"
         - set startip 192.168.122.240
         - set endip 192.168.122.240
     - next
 - end
-
+####
+![image](https://github.com/user-attachments/assets/40a5e9c2-50ce-4924-b526-0246ede5a031)
+####
 - config firewall policy
     - edit 1
         - set name "INTERNET"
@@ -486,17 +491,10 @@ vpcs: Save
 - end
 
 ### TEST 
-
 - FGT-TP # get system session list 
-- PROTO   EXPIRE SOURCE           SOURCE-NAT       DESTINATION      DESTINATION-NAT 
-- tcp     0      127.0.0.1:7021   -                127.0.0.1:80     -               
-- tcp     3598   192.168.10.100:56582 -                192.168.10.10:80 -               
-- tcp     3599   192.168.10.100:56602 -                192.168.10.10:80 -               
-- tcp     607    192.168.10.100:53746 -                192.168.10.10:80 -               
-- icmp    59     192.168.10.100:1148 192.168.122.240:61564 192.168.130.1:8  -               
-- tcp     607    127.0.0.2:20833  -                127.0.0.1:8023   -               
-- udp     178    192.168.122.240:1929 -                208.91.112.53:53 -               
-- udp     178    192.168.122.240:1929 -                208.91.112.52:53 -               
+####
+![image](https://github.com/user-attachments/assets/9ae157a9-9c06-4aee-bac0-bb0f72023a93)
+####
 
 ### One To One NAT Configuration
 
