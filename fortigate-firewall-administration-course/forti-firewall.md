@@ -584,3 +584,81 @@ vpcs: Save
         - set nat enable
     - next
 - end
+
+
+## 22. DESTINATION NAT & PORT FORWARDING.
+####
+![image](https://github.com/user-attachments/assets/0bdc1f18-df78-4c96-84d3-20684a2c2555)
+####
+ - Create the Virtual Interface.
+####
+![image](https://github.com/user-attachments/assets/bfa0dd2b-bdd9-4992-a2ad-d0092db4836c)
+####
+- Create the Firewall policy and use the Source Interface as WAN Interface and Destination as LAN , as we are trying to access from internet to our internal server.
+####
+![image](https://github.com/user-attachments/assets/134b86af-02ec-422a-a6f9-460d0e9d63ea)
+####
+- Accessing the Internal Fortigate From outside network.
+####
+![image](https://github.com/user-attachments/assets/5ee23a72-d8f8-45a0-b060-8e742520fae7)
+####
+
+### CLI CONFIG FROM Other lab for cli reference.
+### DNAT = Destination NAT ###
+
+- DNAT help us to publish an internal server to the internet so we can access to 	it from anywhere.
+
+### DNAT Configuration
+
+- * Web Server:
+
+- root@WEB:~# apt update
+
+- root@WEB:~# apt install apache2 -y
+
+- root@WEB:~# apachectl -D FORGROUND
+
+- * VIP Creation
+
+- config firewall vip
+    - edit "WEB-SERVER"
+        - set extip 41.141.1.2
+        - set mappedip "192.168.1.20"
+        - set extintf "any"
+        - set color 6
+    - next
+- end
+
+- * DNAT Policy Creation
+
+- config firewall policy
+    - edit 2
+        - set name "WEB SERVER"
+        - set srcintf "port2"
+        - set dstintf "port1"
+        - set srcaddr "all"
+        - set dstaddr "web"
+        - set action accept
+        - set schedule "always"
+        - set service "HTTP"
+        - set logtraffic all
+    - next
+- end
+
+- # Please Note that you should choose the "VIP OBJECT" in the destination 	Addresse
+
+### Port Forwarding 
+
+- FGT-TP (vip) # show
+- config firewall vip
+    - edit "WEB-SERVER"
+        - set extip 41.141.1.2
+        - set mappedip "192.168.1.20"
+        - set extintf "any"
+        - set portforward enable
+        - set color 6
+        - set extport 8080
+        - set mappedport 80
+    - next
+- end
+
