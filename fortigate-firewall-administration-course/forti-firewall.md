@@ -442,3 +442,147 @@ vpcs: Save
     - next
 - end
 
+## 21.NAT IP POOL .
+
+### In Fortigate We Have 4 Types of NAT:
+
+#### Overload: is called also "PAT= Port Address Translation" in this type we can nat multiple internale IP's to one Public IP using Source and Destination Ports.
+
+#### One-To-One: in one_to_one NAt one internal ip@ can be translated to one external ip@ at the same time, we don't use "PAT", So if we have 4 internal clients we need 4 Public IP@ to Do NAT.
+
+#### Fixed Port range: This Nat type is also a "PAT" we can specify the range of internal IP@ that we want them to use our  Public IP@.
+
+#### Port Block Allocation: This Nat type is also a "PAT" but the difference is that he is allowing us to specify the number of ports that a user (Internal Ip@) can use.
+
+- Block Size: how many ports are in each block. 128 Port
+										 -   = 1024 PORT.
+		       - Block Per User: how many Block can each user use. 8 Block 
+
+### Overload Configuration
+
+- FGT-TP # show firewall ippool 
+- config firewall ippool
+    - edit "Overload"
+        - set startip 192.168.122.240
+        - set endip 192.168.122.240
+    - next
+- end
+
+- config firewall policy
+    - edit 1
+        - set name "INTERNET"
+        - set srcintf "port1"
+        - set dstintf "port3"
+        - set srcaddr "all"
+        - set dstaddr "all"
+        - set action accept
+        - set schedule "always"
+        - set service "ALL"
+        - set logtraffic all
+        - set ippool enable
+        - set poolname "Overload"
+        - set nat enable
+    - next
+- end
+
+### TEST 
+
+- FGT-TP # get system session list 
+- PROTO   EXPIRE SOURCE           SOURCE-NAT       DESTINATION      DESTINATION-NAT 
+- tcp     0      127.0.0.1:7021   -                127.0.0.1:80     -               
+- tcp     3598   192.168.10.100:56582 -                192.168.10.10:80 -               
+- tcp     3599   192.168.10.100:56602 -                192.168.10.10:80 -               
+- tcp     607    192.168.10.100:53746 -                192.168.10.10:80 -               
+- icmp    59     192.168.10.100:1148 192.168.122.240:61564 192.168.130.1:8  -               
+- tcp     607    127.0.0.2:20833  -                127.0.0.1:8023   -               
+- udp     178    192.168.122.240:1929 -                208.91.112.53:53 -               
+- udp     178    192.168.122.240:1929 -                208.91.112.52:53 -               
+
+### One To One NAT Configuration
+
+- config firewall ippool
+    - edit "One2One"
+        - set type one-to-one
+        - set startip 192.168.122.240
+        - set endip 192.168.122.241
+    - next
+- end
+
+
+- FGT-TP # show firewall policy 3
+- config firewall policy
+    - edit 3
+        - set name "INTERNET"
+        - set srcintf "port1"
+        - set dstintf "port3"
+        - set srcaddr "all"
+        - set dstaddr "all"
+        - set action accept
+        - set schedule "always"
+        - set service "ALL"
+        - set ippool enable
+        - set poolname "One2One"
+        - set nat enable
+    - next
+- end
+
+### FPR Configuration
+
+- config firewall ippool
+    - edit "FPR"
+        - set type fixed-port-range
+        - set startip 192.168.122.240
+        - set endip 192.168.122.240
+        - set source-startip 192.168.10.99
+        - set source-endip 192.168.10.100
+    - next
+- end
+
+- config firewall policy
+    - edit 3
+        - set name "INTERNET"
+        - set srcintf "port1"
+        - set dstintf "port3"
+        - set srcaddr "all"
+        - set dstaddr "all"
+        - set action accept
+        - set schedule "always"
+        - set service "ALL"
+        - set ippool enable
+        - set poolname "FPR"
+        - set nat enable
+    - next
+- end
+
+
+### Clear Users Sessions
+- FGT-TP # diagnose sys session clear
+
+### Port Block Allocation Configuration.
+
+ - config firewall ippool
+    - edit "PBA"
+        - set type fixed-port-range
+        - set startip 192.168.122.240
+        - set endip 192.168.122.240
+        - set num-blocks-per-user 8
+	- set block-size 128
+
+    - next
+- end
+
+- config firewall policy
+    - edit 3
+        - set name "INTERNET"
+        - set srcintf "port1"
+        - set dstintf "port3"
+        - set srcaddr "all"
+        - set dstaddr "all"
+        - set action accept
+        - set schedule "always"
+        - set service "ALL"
+        - set ippool enable
+        - set poolname "PBA"
+        - set nat enable
+    - next
+- end
