@@ -723,3 +723,6 @@ The default settings of FortiGate units have heuristics virus scanning enabled, 
   ####
 ![image](https://github.com/user-attachments/assets/b5eb6e6a-5d09-4383-9889-99696ac6a4bc)
 ####
+
+- EDIT ACCEPT PUSH UPADETE ENABLE
+![image](https://github.com/user-attachments/assets/6c3a6144-d3a4-43d3-9165-11bee8986bd2)
