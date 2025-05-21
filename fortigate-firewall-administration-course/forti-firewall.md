@@ -678,9 +678,7 @@ It detects viruses that are an exact match for a signature in the antivirus data
 ### Grayware.
 - Grayware scan: This scan detects unsolicited programs, known as grayware, that have been installed without the user’s knowledge or consent.
 
-Grayware is not technically a virus. I
-
-t is often bundled with innocuous software, but does have unwanted side effects, so it is categorized as malware.
+Grayware is not technically a virus. It is often bundled with innocuous software, but does have unwanted side effects, so it is categorized as malware.
 
 Often, grayware can be detected with a simple FortiGuard grayware signature.
 
@@ -703,3 +701,25 @@ FortiGate
 Heuristic scanning is a technique used to catch viruses. While traditional signature-based systems rely on predefined virus signatures to catch viruses, heuristics looks at the construction of files for characteristics commonly found in viruses. As a file is examined, the virus-like attributes are totalled.  If a threshold in the number of virus-like attributes  is passed the file is marked as 'suspicious.' Heuristic scanning only examines Microsoft Windows executable files (Windows Portable Executable files), typically ending with an 'exe' extension.
 
 The default settings of FortiGate units have heuristics virus scanning enabled, but suspicious files are allowed to pass because of the possibility of false positives. Using CLI commands, you can disable heuristics entirely, or set suspicious files to be blocked or passed. Files marked as suspicious can be quarantined, and even automatically uploaded to the FortiGuard Center for analysis, depending on settings. For detailed information, see the config antivirus heuristic and config antivirus quarantine commands in the FortiGate CLI Reference.
+
+####
+![image](https://github.com/user-attachments/assets/f77720a0-19d4-4ebc-b92e-7014d954c3fc)
+####
+
+- Create the the Custome Antivirus Policy.
+####
+![image](https://github.com/user-attachments/assets/b8c08974-51e7-486c-bc92-7cb58ea817c1)
+####
+![image](https://github.com/user-attachments/assets/c7c40caa-7466-4b59-b94b-073be65e849e)
+####
+- **USING PROXY***
+####
+![image](https://github.com/user-attachments/assets/d5e2f6c0-ac55-43b5-992b-bb48642e93ea)
+####
+![image](https://github.com/user-attachments/assets/8e8b90f1-700b-48b4-b64c-008b0de9b0e3)
+####
+
+- *DOWNLAOD CERTIFICATE AND INSTALL IN IT AT CLIENT*
+  ####
+![image](https://github.com/user-attachments/assets/b5eb6e6a-5d09-4383-9889-99696ac6a4bc)
+####
