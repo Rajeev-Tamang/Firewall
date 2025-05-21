@@ -666,9 +666,26 @@ vpcs: Save
  ## 23. AntiViruss.
   - Antivirus
   - Grayware
-  - Hercur
+  - heuristic
 
-    ### Grayware.
+ Antivirus scan: This is the first, fastest, simplest way to detect malware.
+
+It detects viruses that are an exact match for a signature in the antivirus database.
+
+ 
+
+
+### Grayware.
+- Grayware scan: This scan detects unsolicited programs, known as grayware, that have been installed without the user’s knowledge or consent.
+
+Grayware is not technically a virus. I
+
+t is often bundled with innocuous software, but does have unwanted side effects, so it is categorized as malware.
+
+Often, grayware can be detected with a simple FortiGuard grayware signature.
+
+
+
 - FortiGate-VM64-KVM (settings) # show 
 - config antivirus settings
     - set use-extreme-db enable
@@ -680,8 +697,9 @@ vpcs: Save
 ####
 
 #### What is heuristic scanning?
-***Heuristic scanning is a method of identifying unwanted email - for viruses and spam. FortiGate and FortiMail use heuristic scanning.
+Heuristic scanning is a method of identifying unwanted email - for viruses and spam. FortiGate and FortiMail use heuristic scanning.
+
 FortiGate
 Heuristic scanning is a technique used to catch viruses. While traditional signature-based systems rely on predefined virus signatures to catch viruses, heuristics looks at the construction of files for characteristics commonly found in viruses. As a file is examined, the virus-like attributes are totalled.  If a threshold in the number of virus-like attributes  is passed the file is marked as 'suspicious.' Heuristic scanning only examines Microsoft Windows executable files (Windows Portable Executable files), typically ending with an 'exe' extension.
 
-The default settings of FortiGate units have heuristics virus scanning enabled, but suspicious files are allowed to pass because of the possibility of false positives. Using CLI commands, you can disable heuristics entirely, or set suspicious files to be blocked or passed. Files marked as suspicious can be quarantined, and even automatically uploaded to the FortiGuard Center for analysis, depending on settings. For detailed information, see the config antivirus heuristic and config antivirus quarantine commands in the FortiGate CLI Reference.***
+The default settings of FortiGate units have heuristics virus scanning enabled, but suspicious files are allowed to pass because of the possibility of false positives. Using CLI commands, you can disable heuristics entirely, or set suspicious files to be blocked or passed. Files marked as suspicious can be quarantined, and even automatically uploaded to the FortiGuard Center for analysis, depending on settings. For detailed information, see the config antivirus heuristic and config antivirus quarantine commands in the FortiGate CLI Reference.
