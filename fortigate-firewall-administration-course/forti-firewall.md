@@ -726,3 +726,23 @@ The default settings of FortiGate units have heuristics virus scanning enabled, 
 
 - EDIT ACCEPT PUSH UPADETE ENABLE
 ![image](https://github.com/user-attachments/assets/6c3a6144-d3a4-43d3-9165-11bee8986bd2)
+---
+---
+---
+
+
+# LOCAL USER. 
+- Create local user.
+![image](https://github.com/user-attachments/assets/af27a662-f908-45c3-964a-5b0ba07bf998)
+####
+- Create User Group and Bind to User.
+####
+![image](https://github.com/user-attachments/assets/864a5ec4-2357-4b1d-b67c-5fc1d7a913c4)
+####
+
+- Bind the user in Firewall policy.
+![image](https://github.com/user-attachments/assets/8ba70e7f-e769-440b-b5f5-7faa07bc8c3c)
+####
+- Access the Intenet Now, authentication will be required.
+
+####
