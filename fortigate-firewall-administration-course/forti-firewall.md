@@ -744,8 +744,10 @@ The default settings of FortiGate units have heuristics virus scanning enabled, 
 ![image](https://github.com/user-attachments/assets/8ba70e7f-e769-440b-b5f5-7faa07bc8c3c)
 ####
 - Access the Intenet Now, authentication will be required.
-
 ####
+---
+---
+---
 ## LDAP
 ### Configure such that the user of Windows Server can access the foritagte.
 
