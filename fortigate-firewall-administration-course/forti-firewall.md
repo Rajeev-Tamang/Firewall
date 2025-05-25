@@ -746,3 +746,28 @@ The default settings of FortiGate units have heuristics virus scanning enabled, 
 - Access the Intenet Now, authentication will be required.
 
 ####
+## LDAP
+### Configure such that the user of Windows Server can access the foritagte.
+
+- Create User in AD.
+![image](https://github.com/user-attachments/assets/1fb9740f-8204-4946-9fba-fd95950d2a5a)
+####
+- Create Group and bind the user in group.
+![image](https://github.com/user-attachments/assets/f38d5484-41f3-4ea2-baa6-bef4341df6b7)
+####
+![image](https://github.com/user-attachments/assets/d63a02fa-54a9-44f5-babe-6ad2d7b9306e)
+####
+- Make Connectivity between Windows AD & Fortinet.
+![image](https://github.com/user-attachments/assets/e47456e0-f5c0-4f26-a9d6-5a6574fd6aa1)
+####
+- Create the USer Group and Bind the AD users in same group.
+![image](https://github.com/user-attachments/assets/4ab0b2c9-d858-4ef3-81e9-c9d88c4b5364)
+####
+- Create Adminstrator User , Matching the user of remote-Server [AD].
+![image](https://github.com/user-attachments/assets/169f8b5a-bbed-4cd7-9aec-2fffc4839cb2)
+####
+----
+----
+----
+
+## 
